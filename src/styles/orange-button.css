@@ -1,0 +1,52 @@
+.btn{
+    font-family: axia-stencil, sans-serif;
+    font-weight: 900;
+    border-radius: 1px;
+    cursor:pointer;
+    transition: transform 0.5s ease;
+    font-size: 18px;
+    position: absolute;
+    width: auto;
+}
+
+.btn-orange-color {
+    background-color: var(--orange-color);
+    color:var(--black-color);
+    border:none;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0px 15px 23px -5px rgba(0,0,0,0.21); 
+    box-shadow: 0px 15px 23px -5px rgba(0,0,0,0.21);
+
+}
+
+.btn-orange-color:hover {
+    transition: all 0.3s ease;
+    box-shadow: -9px -9px 0px -1px rgba(0,0,0,1);
+    -webkit-box-shadow: -9px -9px 0px -1px rgba(0,0,0,1);
+    -moz-box-shadow: -9px -9px 0px -1px rgba(0,0,0,1);
+}
+
+/* button sizes */
+
+.btn-medium {
+    padding: 8px 25px;
+}
+
+.btn-large {
+    padding: 50px 70px;
+}
+
+.btn-agency {
+    left: 66%;
+    
+}
+
+.btn-services {
+    left:45%;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-agency {
+        left: 10%;  
+    }
+  }

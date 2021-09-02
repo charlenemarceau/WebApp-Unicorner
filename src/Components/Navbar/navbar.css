@@ -1,23 +1,48 @@
-body {
-    margin:0;
-    padding: 0;
+* {
+    font-family: axia-stencil, sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
-nav {
-    height: 50px;
-    background: rgb(189, 96, 96);
+.nav-container {
+    z-index:2;
+    position: fixed;
+    display: flex;
+    background: var(--dark-color);
+    width: 100%;
+    line-height: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container ul, a {
+    list-style: none;
+    text-decoration:none;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 80%;    
+    justify-content: flex-end;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .liste {
     list-style: none;
-    background: rgb(189, 96, 96);
+    background: var(--dark-color);
     height:100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
     position: relative;
     margin:0;
     padding:0;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var( --orange-color);
 }
 
 .items {
@@ -25,32 +50,57 @@ nav {
     color: white;
     cursor: pointer;
 }
+.logo {
+    padding-left:50px;
+}
 
-.btn {
+.nav-container img {
+    width: 185px;
+    margin-top: 10px;
+}
+.menu-burger {
     display: none;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:768px) {
+    .logo {
+        padding-left:5px;
+    }
+    
     .liste {
+        position: absolute;
+        top:53px;
         flex-direction: column;
-        height: 300px;
+        height: 100%;
+        width: 100%;
+        background: black;
+        border: 1 solid var(--col-orange);
     }
     .items:nth-child(1) {
-        border-top: 1px solid orange;
         margin-top: 50px;
     }
     .items {
         height: 50px;
-        width: 80%;
-        border-bottom: 1px solid orange;
+        width: 60%;
+        border-bottom: 1px solid var(--orange-color);
         line-height: 50px;
+        color: black;
+
     }
-    .btn {
+    .nav-container ul a {
+        color:var(--dark-color);
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background: black;
+    }
+    .menu-burger {
         display: block;
         position: absolute;
-        right: 10px;
+        right: 30px;
         top: 10px;
-        color: black;
+        color: var(--orange-color);
         cursor:pointer;
     }
 }
